@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.create(title: params[:article][:title], description: params[:article][:description])
+    @article = Article.create(title: params[:title], description: params[:description])
     redirect_to article_path(@article)
   end
 
